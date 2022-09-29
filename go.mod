@@ -1,4 +1,4 @@
-module manuelarte-go-validations
+module github.com/manuelarte/manuelarte-go-validations
 
 go 1.19
 
