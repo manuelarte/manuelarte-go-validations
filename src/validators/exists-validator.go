@@ -21,7 +21,7 @@ func NewExistsValidatorWithCustomTag(db *gorm.DB, tagName string) ExistsValidato
 	return ExistsValidator{db, tagName}
 }
 
-func (eV ExistsValidator) RegisterExistsValidator(validate *validator.Validate) error {
+func (eV ExistsValidator) RegisterValidator(validate *validator.Validate) error {
 	return validate.RegisterValidation(eV.TagName, eV.ValidateExists, true)
 }
 
