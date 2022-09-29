@@ -27,11 +27,11 @@ func (iV IsValidValidator) ValidateIsValid(fl validator.FieldLevel) bool {
 		return true
 	}
 	if isValidField, ok := fl.Field().Interface().(IsValid); ok {
-		return isValidField.isValid()
+		return isValidField.IsValid()
 	}
 	return false
 }
 
 type IsValid interface {
-	isValid() bool
+	IsValid() bool
 }

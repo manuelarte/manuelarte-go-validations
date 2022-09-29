@@ -11,7 +11,7 @@ type testRequestStruct struct {
 	Name Name `validate:"is-valid"`
 }
 
-func (n Name) isValid() bool {
+func (n Name) IsValid() bool {
 	return len(n) > 3 && len(n) < 40
 }
 
